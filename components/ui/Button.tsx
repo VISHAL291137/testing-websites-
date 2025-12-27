@@ -12,13 +12,13 @@ export const Button: React.FC<ButtonProps> = ({
   className = '', 
   ...props 
 }) => {
-  const baseStyles = "px-6 py-3 rounded-md font-sans font-medium transition-all duration-300 ease-in-out text-sm tracking-wide uppercase";
+  const baseStyles = "px-8 py-3 rounded-none font-sans font-medium transition-all duration-500 ease-in-out text-[10px] tracking-[0.2em] uppercase border";
   
   const variants = {
-    primary: "bg-nish-brown text-nish-ivory hover:bg-black hover:shadow-lg border border-transparent",
-    secondary: "bg-nish-gold text-nish-brown hover:bg-[#C9961A] hover:shadow-md",
-    outline: "border border-nish-brown text-nish-brown hover:bg-nish-brown hover:text-nish-ivory",
-    text: "bg-transparent text-nish-brown hover:text-nish-gold px-2 py-1"
+    primary: "bg-nish-gold text-nish-bg hover:bg-nish-gold-light border-nish-gold shadow-lg",
+    secondary: "bg-transparent text-nish-gold border-nish-gold hover:bg-nish-gold hover:text-nish-bg",
+    outline: "bg-transparent border-nish-border text-nish-grey hover:border-nish-gold hover:text-white",
+    text: "border-transparent bg-transparent text-nish-grey hover:text-nish-gold px-2"
   };
 
   return (

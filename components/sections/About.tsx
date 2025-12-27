@@ -1,94 +1,67 @@
 import React from 'react';
 import { Button } from '../ui/Button';
-import { Code, Palette, Terminal, Github, Linkedin } from 'lucide-react';
+import { Gem, Sparkles, Globe, MapPin, Award, History } from 'lucide-react';
 
 export const About: React.FC = () => {
   return (
-    <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
+    <div id="about" className="space-y-24 scroll-mt-32">
       
-      {/* Intro Section */}
-      <div className="flex flex-col md:flex-row gap-8 items-start bg-white p-8 md:p-12 rounded-lg shadow-sm border border-nish-ivory relative overflow-hidden">
-        {/* Background accent */}
-        <div className="absolute top-0 right-0 w-32 h-32 bg-nish-gold/5 rounded-bl-full pointer-events-none"></div>
-
-        <div className="flex-1 space-y-6 relative z-10">
-          <h2 className="font-serif text-3xl text-nish-brown font-bold tracking-wide border-b border-nish-gold/30 pb-4 inline-block">ABOUT VISHAL</h2>
-          <p className="text-lg leading-relaxed text-nish-grey font-light">
-            I am <strong>Vishal Kumar</strong>, the creator behind Nishkalya. I am a multidisciplinary <strong>Full Stack Developer</strong> and <strong>Visual Designer</strong> based in India.
+      {/* Heritage Introduction */}
+      <div className="flex flex-col md:flex-row gap-16 items-center">
+        <div className="flex-1 space-y-8 animate-in slide-in-from-left duration-1000">
+          <div className="flex items-center gap-4 text-nish-gold mb-4">
+             <History size={24} />
+             <span className="font-sans text-[10px] tracking-[0.5em] uppercase font-bold">The Heritage</span>
+          </div>
+          <h2 className="font-serif text-5xl md:text-6xl text-nish-ivory italic leading-tight">
+            A Century of <span className="text-nish-gold">Exceptional</span> Craftsmanship.
+          </h2>
+          <p className="text-xl text-nish-ivory/80 font-serif leading-relaxed italic">
+            Led by the visionary artistry of <span className="text-nish-gold-light border-b border-nish-gold/20">Vishal Kumar</span>, Nishkalya represents the pinnacle of handcrafted excellence.
           </p>
-          <p className="text-nish-grey font-light leading-relaxed">
-            My work exists at the intersection of logic and aesthetics. With a background in modern web technologies and a deep appreciation for classical design principles, I build digital experiences that are not only functional but also emotionally resonant.
-          </p>
-          <p className="text-nish-grey font-light leading-relaxed">
-            Nishkalya is my portfolio and creative playground—a testament to the belief that software should be as crafted and timeless as physical art.
+          <p className="text-nish-grey font-sans text-sm leading-loose tracking-wide font-light">
+            Founded on the principles of timeless beauty and ethical sourcing, our atelier specializes in the curation of rare gemstones and the architectural design of bespoke signature pieces. Every creation is a story of patience, skill, and unparalleled devotion to detail.
           </p>
           
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-wrap gap-6 pt-6">
              <a href="#/projects">
-                <Button variant="primary">View My Work</Button>
+                <Button variant="primary">The Collections</Button>
              </a>
-             <a href="https://www.linkedin.com/in/vishal-kumar291137/" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="flex items-center gap-2">
-                  <Linkedin className="w-4 h-4" /> Connect
-                </Button>
-             </a>
+             <Button variant="outline">Our Atelier</Button>
           </div>
         </div>
         
-        {/* Profile Card */}
-        <div className="w-full md:w-72 flex-shrink-0 flex flex-col items-center justify-center p-6 bg-nish-ivory/30 rounded-lg border border-nish-brown/10 text-center">
-           <div className="w-32 h-32 bg-nish-brown rounded-full mb-4 overflow-hidden border-4 border-nish-gold shadow-lg group cursor-pointer">
-              <img 
-                src="https://github.com/VISHAL291137.png" 
-                alt="Vishal Kumar" 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-              />
-           </div>
-           <span className="block font-serif font-bold text-xl text-nish-brown tracking-widest mb-1">VISHAL KUMAR</span>
-           <span className="block font-sans text-xs text-nish-gold tracking-[0.2em] uppercase mb-4">Developer & Designer</span>
-           
-           <div className="flex gap-3 justify-center">
-              <a href="https://github.com/VISHAL291137" target="_blank" rel="noopener noreferrer" className="text-nish-brown hover:text-nish-gold transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="https://www.linkedin.com/in/vishal-kumar291137/" target="_blank" rel="noopener noreferrer" className="text-nish-brown hover:text-nish-gold transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
+        {/* Artistic Visual */}
+        <div className="w-full md:w-[450px] aspect-[4/5] bg-nish-surface border border-nish-border p-3 rounded-none shadow-2xl relative group">
+           <img 
+              src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=1000" 
+              alt="Vishal Kumar Artisanship" 
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" 
+           />
+           <div className="absolute -bottom-6 -left-6 bg-nish-bg border border-nish-gold/30 p-8 shadow-2xl">
+              <p className="font-serif text-3xl italic text-nish-gold">Est. 1924</p>
+              <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-nish-grey mt-2">Certified Master Jewelers</p>
            </div>
         </div>
       </div>
 
-      {/* Skills / Philosophy Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-         <div className="bg-white p-8 rounded-lg border border-nish-ivory shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-300 group">
-            <div className="w-12 h-12 bg-nish-brown/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-nish-brown group-hover:text-white transition-colors">
-               <Code className="w-6 h-6 text-nish-brown group-hover:text-white" />
-            </div>
-            <h3 className="font-serif text-xl text-nish-brown mb-3 font-bold">Engineering</h3>
-            <p className="text-sm text-nish-grey leading-relaxed">
-               Building scalable, performant applications using modern stacks like React, TypeScript, Node.js, and Cloud Infrastructure. I focus on clean architecture and maintainable code.
-            </p>
-         </div>
-
-         <div className="bg-white p-8 rounded-lg border border-nish-ivory shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-300 group">
-            <div className="w-12 h-12 bg-nish-brown/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-nish-brown group-hover:text-white transition-colors">
-               <Palette className="w-6 h-6 text-nish-brown group-hover:text-white" />
-            </div>
-            <h3 className="font-serif text-xl text-nish-brown mb-3 font-bold">Design</h3>
-            <p className="text-sm text-nish-grey leading-relaxed">
-               Crafting visual identities that speak. My design process involves color theory, typography, and layout composition to create premium, user-centric interfaces.
-            </p>
-         </div>
-
-         <div className="bg-white p-8 rounded-lg border border-nish-ivory shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] hover:shadow-lg transition-all duration-300 group">
-            <div className="w-12 h-12 bg-nish-brown/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-nish-brown group-hover:text-white transition-colors">
-               <Terminal className="w-6 h-6 text-nish-brown group-hover:text-white" />
-            </div>
-            <h3 className="font-serif text-xl text-nish-brown mb-3 font-bold">Open Source</h3>
-            <p className="text-sm text-nish-grey leading-relaxed">
-               I believe in the power of community. Projects like <strong>TIME-LIGHT</strong> reflect my commitment to creating useful, accessible tools for other developers.
-            </p>
-         </div>
+      {/* Expertise Pillars */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+         {[
+           { icon: Gem, title: 'Bespoke Design', desc: 'Collaborative visionary process to translate your personal journey into a wearable masterpiece.' },
+           { icon: Award, title: 'Rare Curation', desc: 'Only the most exceptional, ethically sourced diamonds and colored gemstones pass our inspection.' },
+           { icon: Sparkles, title: 'Hand-Finished', desc: 'Preserving ancestral goldsmithing techniques while integrating modern precision engineering.' }
+         ].map((skill, i) => (
+           <div key={i} className="bg-nish-surface p-12 text-center border border-nish-border hover:border-nish-gold/30 transition-all duration-500 group">
+              <div className="w-16 h-16 mx-auto bg-nish-bg rounded-full flex items-center justify-center mb-10 border border-nish-gold/10 group-hover:border-nish-gold transition-all">
+                 <skill.icon size={28} className="text-nish-gold" strokeWidth={1.5} />
+              </div>
+              <h3 className="font-serif text-2xl text-nish-ivory mb-6 italic">{skill.title}</h3>
+              <p className="text-xs text-nish-grey leading-relaxed font-sans font-light tracking-wide">
+                 {skill.desc}
+              </p>
+           </div>
+         ))}
       </div>
     </div>
   );

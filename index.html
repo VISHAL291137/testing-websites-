@@ -3,26 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nishkalya | Power in Stillness</title>
+    <title>Nishkalya | Fine Jewelry & Bespoke Artisans</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              serif: ['"Cinzel"', 'serif'],
-              sans: ['"Poppins"', 'sans-serif'],
-              body: ['"Inter"', 'sans-serif'],
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Montserrat"', 'sans-serif'],
+              body: ['"Montserrat"', 'sans-serif'],
             },
             colors: {
-              'nish-ivory': '#F3E9D2',
-              'nish-brown': '#2B1F1A',
-              'nish-gold': '#DAA520',
-              'nish-grey': '#8A8A8A',
-              'nish-paper': '#FFFDF9',
+              'nish-bg': '#0A0A0A',
+              'nish-surface': '#121212',
+              'nish-gold': '#D4AF37',
+              'nish-gold-light': '#F1E5AC',
+              'nish-ivory': '#F9F9F7',
+              'nish-grey': '#A0A0A0',
+              'nish-border': '#262626',
             }
           }
         }
@@ -33,12 +35,28 @@
         scroll-behavior: smooth;
       }
       body {
-        background-color: #F3E9D2;
-        color: #2B1F1A;
+        background-color: #0A0A0A;
+        color: #F9F9F7;
+      }
+      .luxury-gradient {
+        background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+      }
+      .gold-shimmer {
+        background: linear-gradient(90deg, #D4AF37, #F1E5AC, #D4AF37);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 4s linear infinite;
+      }
+      @keyframes shimmer {
+        to { background-position: 200% center; }
+      }
+      .soft-glow {
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
       }
       .masonry-grid {
         column-count: 2;
-        column-gap: 1rem;
+        column-gap: 1.5rem;
       }
       @media (min-width: 768px) {
         .masonry-grid {
@@ -47,7 +65,17 @@
       }
       .masonry-item {
         break-inside: avoid;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0A0A0A;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D4AF37;
+        border-radius: 10px;
       }
     </style>
   <script type="importmap">

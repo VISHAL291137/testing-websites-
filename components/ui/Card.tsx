@@ -20,15 +20,23 @@ export const Card: React.FC<CardProps> = ({
   return (
     <div 
       id={id}
-      className={`bg-white/80 backdrop-blur-sm rounded-lg shadow-[0_4px_20px_-4px_rgba(43,31,26,0.05)] p-6 md:p-8 mb-8 border border-nish-ivory/50 transition-all duration-300 hover:shadow-[0_8px_30px_-4px_rgba(43,31,26,0.1)] ${hasAccentBorder ? 'border-l-4 border-l-nish-gold' : ''} ${className}`}
+      className={`bg-nish-surface border border-nish-border p-8 md:p-12 mb-12 transition-all duration-700 hover:border-nish-gold/20 group relative overflow-hidden ${className}`}
     >
+      {hasAccentBorder && (
+        <div className="absolute top-0 left-0 w-full h-1 bg-nish-gold opacity-30"></div>
+      )}
       {title && (
-        <div className="flex justify-between items-center mb-6 pb-4 border-b border-nish-ivory">
-          <h2 className="text-2xl font-serif font-bold text-nish-brown uppercase tracking-wider">{title}</h2>
+        <div className="flex justify-between items-center mb-10 border-b border-nish-border pb-6">
+          <h2 className="text-2xl md:text-3xl font-serif italic text-nish-gold-light tracking-wide flex items-center gap-4">
+            {title}
+            <div className="w-8 h-px bg-nish-gold/40"></div>
+          </h2>
           {headerAction}
         </div>
       )}
-      {children}
+      <div className="relative z-10">
+        {children}
+      </div>
     </div>
   );
 };
